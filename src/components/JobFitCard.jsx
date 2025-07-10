@@ -8,7 +8,7 @@ const JobFitCard = ({ data }) => {
     labels: ['AI', 'Digital', 'DX Eng.', 'Cloud'],
     datasets: [
       {
-        label: '직무 적합도',
+        label: '직무 별 적합도',
         data: [data.ai, data.digital, data.dx, data.cloud],
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',

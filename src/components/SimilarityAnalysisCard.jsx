@@ -25,7 +25,7 @@ const SimilarityAnalysisCard = ({ data, options }) => {
       </div>
       <div className="analysis-container">
         <AnalysisSection
-          title="핵심인재와의 유사도"
+          title="조직 적합도"
           data={talent}
           options={options}
         />
