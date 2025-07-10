@@ -1,0 +1,380 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+.dashboard-container {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.header button {
+  padding: 0.25rem 0.75rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
+}
+
+.grid-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-col-span-2 {
+  grid-column: span 1;
+}
+
+.grid-col-span-4 {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+  .grid-col-span-4 {
+    grid-column: span 4;
+  }
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card-subtitle {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+}
+
+.card-button {
+  font-size: 0.75rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Specific Card Content */
+
+/* Applicant Grade Card */
+.grade-s {
+  color: #ef4444;
+}
+.grade-graph {
+  height: 6rem;
+  margin-bottom: 0.5rem;
+}
+.grade-list {
+  font-size: 0.75rem;
+  color: #4b5563;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.grade-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grade-list span.value {
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+}
+.grade-list span.status {
+    font-weight: 600;
+    color: #3b82f6;
+    padding: 0.125rem 0.5rem;
+    background-color: #eff6ff;
+    border-radius: 0.25rem;
+}
+
+/* Job Fit Card */
+.job-fit-chart {
+  height: 10rem;
+}
+
+/* Core Talent Report Card */
+.core-talent-report-card .card-content {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+.core-talent-report-card .report-summary {
+  background-color: #f3f4f6;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.core-talent-report-card .derived-type-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #eef2ff;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+.core-talent-report-card .derived-type-label {
+  font-weight: 600;
+}
+.core-talent-report-card .derived-type-value {
+  font-weight: 700;
+  color: #4338ca;
+}
+.core-talent-report-card .rationale-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.core-talent-report-card .rationale-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.core-talent-report-card .rationale-list li {
+  padding-left: 1rem;
+  position: relative;
+}
+.core-talent-report-card .rationale-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #34d399;
+}
+
+
+/* Similarity Analysis Card */
+.similarity-analysis-card .card-header {
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.similarity-analysis-card .card-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.similarity-analysis-card .card-subtitle {
+    font-size: 0.875rem; /* 14px */
+    color: #6b7280;
+    margin: 0;
+}
+
+.similarity-analysis-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.similarity-analysis-card .analysis-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1rem;
+  padding-top: 1rem;
+  flex-grow: 1;
+}
+
+.similarity-analysis-card .analysis-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.similarity-analysis-card .chart-wrapper {
+  width: 100%;
+  position: relative;
+  flex-grow: 1;
+}
+
+.similarity-analysis-card .description-wrapper {
+  text-align: center;
+}
+
+.similarity-analysis-card .description-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #374151;
+}
+
+.similarity-analysis-card .divider {
+  width: 1px;
+  background-color: #e5e7eb;
+  align-self: stretch;
+}
+
+
+/* ACD Report Card */
+.acd-report-card .ai-usage-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+.acd-content {
+  margin-top: 1rem;
+}
+.acd-content .content-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.cover-letter-box {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  word-break: keep-all;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+.cover-letter-box .highlight {
+  background-color: #fef9c3;
+  font-weight: 600;
+}
+.gpt-sentences-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.gpt-sentences-list li {
+  background-color: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  line-height: 1.5;
+}
+
+
+/* Chart Cards */
+.chart-card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .chart-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.chart-container {
+    height: 12rem;
+    text-align: center;
+}
+
+.chart-description {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* AI Questions Card */
+.ai-questions ol {
+    font-size: 0.75rem;
+    color: #374151;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.ai-questions li {
+    margin-bottom: 0;
+    line-height: 1.5;
+    display: flex;
+}
+.ai-questions li::before {
+    content: counter(list-item) ".";
+    counter-increment: list-item;
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
