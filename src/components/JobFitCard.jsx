@@ -60,7 +60,7 @@ const JobFitCard = ({ data }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h3 className="card-title">직무 적합도</h3>
+        <h3 className="card-title">직무 별 적합도</h3>
         <button className="card-button">상세</button>
       </div>
       <div className="job-fit-chart">
